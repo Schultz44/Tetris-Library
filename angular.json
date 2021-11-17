@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "tetris-lib": {
+      "projectType": "library",
+      "root": "projects/tetris-lib",
+      "sourceRoot": "projects/tetris-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/tetris-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/tetris-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/tetris-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tetris-lib/src/test.ts",
+            "tsConfig": "projects/tetris-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/tetris-lib/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "tetris-lib"
 }

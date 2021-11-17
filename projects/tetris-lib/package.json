@@ -1,0 +1,12 @@
+{
+  "name": "tetris-lib",
+  "version": "0.0.7",
+  "peerDependencies": {
+    "@angular/common": ">=10 <=12.2.0 || 13.0.0",
+    "@angular/core": ">=10 <=12.2.0 || 13.0.0",
+    "@types/lodash.clonedeep": "^4.5.6"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}

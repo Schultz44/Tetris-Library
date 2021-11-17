@@ -13,6 +13,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To build the library go into the tetris directory and run command 'ng build --configuration production'
+cd dist/tetris-lib
+npm publish // if getting 404 error, try: 'npm login'
 
 ## Running unit tests
 

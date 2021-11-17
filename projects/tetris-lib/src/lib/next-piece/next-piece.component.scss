@@ -1,0 +1,27 @@
+@import '../../styles.scss';
+$color: var(--nextPieceColor);
+.tile {
+  height: 25px;
+  width: 25px;
+
+  &.xAxis {
+    float: left;
+  }
+  &.yAxis {
+    // border: 1px solid #eee;
+  }
+}
+
+.block {
+  position: absolute;
+  // margin: -2px -1px;
+  height: 23px;
+  width: 22px;
+  border: 2px solid #101010;
+  z-index: 2;
+  box-shadow: inset 0px 0px 0.5px 1px #101010;
+  transition: 0.4s;
+  &.active {
+    box-shadow: inset 0px 0px 1px 25px $color;
+  }
+}

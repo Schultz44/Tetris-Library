@@ -1,0 +1,20 @@
+<div *ngFor="let x of pieceContainer; let i = index" class="tile x{{ i }} xAxis">
+  <div *ngFor="let y of x; let j = index" class="tile y{{ j }} yAxis">
+    <div
+      *ngIf="nextPiece && nextPiece.block1[0] == i + (nextPiece.name == 'i' ? 3 : 4) && nextPiece.block1[1] == j"
+      class="relative block active"
+    ></div>
+    <div
+      *ngIf="nextPiece && nextPiece.block2[0] == i + (nextPiece.name == 'i' ? 3 : 4) && nextPiece.block2[1] == j"
+      class="relative block active"
+    ></div>
+    <div
+      *ngIf="nextPiece && nextPiece.block3[0] == i + (nextPiece.name == 'i' ? 3 : 4) && nextPiece.block3[1] == j"
+      class="relative block active"
+    ></div>
+    <div
+      *ngIf="nextPiece && nextPiece.block4[0] == i + (nextPiece.name == 'i' ? 3 : 4) && nextPiece.block4[1] == j"
+      class="relative block active"
+    ></div>
+  </div>
+</div>
